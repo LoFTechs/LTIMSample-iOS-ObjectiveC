@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="127" id="eaC-IC-Ud2" customClass="MessageCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eaC-IC-Ud2" id="2bw-ir-jv0">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2VS-3Z-Zgr">
+                        <rect key="frame" x="8" y="8" width="325" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d5d-HW-wyV">
+                        <rect key="frame" x="8" y="33" width="398" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPx-ga-mV1">
+                        <rect key="frame" x="8" y="62" width="398" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EdA-Sh-1nq">
+                        <rect key="frame" x="311" y="89" width="42" height="30"/>
+                        <state key="normal" title="Recall"/>
+                        <connections>
+                            <action selector="clickBtnRecall:" destination="eaC-IC-Ud2" eventType="touchUpInside" id="d2i-je-GJX"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGk-dT-FcV">
+                        <rect key="frame" x="361" y="89" width="45" height="30"/>
+                        <state key="normal" title="Delete"/>
+                        <connections>
+                            <action selector="clickBtnDelete:" destination="eaC-IC-Ud2" eventType="touchUpInside" id="Owf-tW-Y7W"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SendTime" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-oP-jiU">
+                        <rect key="frame" x="341" y="8" width="65" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Aod-oP-jiU" firstAttribute="top" secondItem="2bw-ir-jv0" secondAttribute="top" constant="8" id="0cs-y3-sso"/>
+                    <constraint firstItem="EdA-Sh-1nq" firstAttribute="top" secondItem="HPx-ga-mV1" secondAttribute="bottom" constant="6" id="0ef-xO-iQ4"/>
+                    <constraint firstAttribute="trailing" secondItem="d5d-HW-wyV" secondAttribute="trailing" constant="8" id="B26-lS-zfm"/>
+                    <constraint firstAttribute="trailing" secondItem="gGk-dT-FcV" secondAttribute="trailing" constant="8" id="BPL-yA-gtE"/>
+                    <constraint firstItem="gGk-dT-FcV" firstAttribute="leading" secondItem="EdA-Sh-1nq" secondAttribute="trailing" constant="8" id="FqB-DL-dvF"/>
+                    <constraint firstAttribute="bottom" secondItem="EdA-Sh-1nq" secondAttribute="bottom" constant="8" id="IHU-we-0NH"/>
+                    <constraint firstItem="2VS-3Z-Zgr" firstAttribute="leading" secondItem="2bw-ir-jv0" secondAttribute="leading" constant="8" id="Pqf-HV-e1C"/>
+                    <constraint firstAttribute="trailing" secondItem="HPx-ga-mV1" secondAttribute="trailing" constant="8" id="WgY-qk-PMZ"/>
+                    <constraint firstItem="d5d-HW-wyV" firstAttribute="top" secondItem="2VS-3Z-Zgr" secondAttribute="bottom" constant="8" id="WtV-8Y-nfi"/>
+                    <constraint firstItem="d5d-HW-wyV" firstAttribute="leading" secondItem="2bw-ir-jv0" secondAttribute="leading" constant="8" id="Z29-zc-DVh"/>
+                    <constraint firstItem="gGk-dT-FcV" firstAttribute="centerY" secondItem="EdA-Sh-1nq" secondAttribute="centerY" id="cGg-C8-aKg"/>
+                    <constraint firstItem="HPx-ga-mV1" firstAttribute="top" secondItem="d5d-HW-wyV" secondAttribute="bottom" constant="8" id="f3y-G2-CXw"/>
+                    <constraint firstAttribute="bottom" secondItem="gGk-dT-FcV" secondAttribute="bottom" constant="8" id="ild-aL-2oL"/>
+                    <constraint firstItem="Aod-oP-jiU" firstAttribute="leading" secondItem="2VS-3Z-Zgr" secondAttribute="trailing" constant="8" id="oUo-nU-lwv"/>
+                    <constraint firstItem="HPx-ga-mV1" firstAttribute="leading" secondItem="2bw-ir-jv0" secondAttribute="leading" constant="8" id="qYA-Ir-Bcd"/>
+                    <constraint firstItem="2VS-3Z-Zgr" firstAttribute="top" secondItem="2bw-ir-jv0" secondAttribute="top" constant="8" id="r7V-Wd-Rkw"/>
+                    <constraint firstItem="Aod-oP-jiU" firstAttribute="centerY" secondItem="2VS-3Z-Zgr" secondAttribute="centerY" id="rgV-gg-dXG"/>
+                    <constraint firstAttribute="trailing" secondItem="Aod-oP-jiU" secondAttribute="trailing" constant="8" id="tKa-Mk-W4u"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnDelete" destination="gGk-dT-FcV" id="mqA-eH-cJR"/>
+                <outlet property="btnRecall" destination="EdA-Sh-1nq" id="nol-uh-OU0"/>
+                <outlet property="lblDetail" destination="HPx-ga-mV1" id="nac-Vi-DLA"/>
+                <outlet property="lblMessage" destination="d5d-HW-wyV" id="aeg-au-ryX"/>
+                <outlet property="lblSendTime" destination="Aod-oP-jiU" id="9Ca-iX-4Pa"/>
+                <outlet property="lblSender" destination="2VS-3Z-Zgr" id="hop-St-Xmc"/>
+            </connections>
+            <point key="canvasLocation" x="40.579710144927539" y="105.46875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
